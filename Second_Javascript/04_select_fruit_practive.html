@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        let a = ['사과', '감', '감', '배', '포도', '포도', '딸기', '포도', '감', '수박', '딸기']
+
+        function count_fruit() {
+            let name = $('#posting-url').val();
+
+            if (name == '') {
+                // 3. alert('입력하세요!') 띄우기
+                alert('입력하세요! 제발~~');
+            } else {
+                let count = 0;
+
+                for (let i = 0; i < a.length; i++) {
+                    if (a[i] == name) {
+                        count = count + 1;
+                    }
+                    console.log(count);
+                }
+                if (count == 0) {
+                    alert('사과, 감, 배, 포도, 딸기, 수박 중 하나를 고르시요');
+                } else
+                if (count != 0) {
+                    alert(count);
+                }
+
+            }
+
+        }
+
+        // function hey() {
+        //     input_value = $('#posting-url').val();
+        //     alert(input_value);
+        // }
+    </script>
+
+
+</head>
+<div class="form-group">
+    <label for="exampleFormControlInput1"> 좋아하는 과일명을 입력하시요! </label>
+    <input id="posting-url" class="form-control" placeholder="">
+
+    <button onclick="count_fruit()" type="button" class="btn btn-primary">결과값 출력</button>
+</div>
+
+<body>
+
+
+
+</body>
+
+</html>

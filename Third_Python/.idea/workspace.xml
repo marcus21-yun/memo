@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ed8cbd4-cfd2-43e2-bbfd-0a09d9bab960" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1ZjnpYjLwLUy7V9p7TMb2HTaXTH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RunManager" selected="Python.200328_homework_GeniMusic">
+    <configuration name="01_hello" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Third_Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/01_hello.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="02_practice_requests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Third_Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/02_practice_requests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="03_practive_crawling" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Third_Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/03_practive_crawling.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="200328_homework_GeniMusic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Third_Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/200328_homework_GeniMusic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="practice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Third_Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/practice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.200328_homework_GeniMusic" />
+        <item itemvalue="Python.practice" />
+        <item itemvalue="Python.03_practive_crawling" />
+        <item itemvalue="Python.02_practice_requests" />
+        <item itemvalue="Python.01_hello" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ed8cbd4-cfd2-43e2-bbfd-0a09d9bab960" name="Default Changelist" comment="" />
+      <created>1585361553569</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585361553569</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="683" y="137" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585372451522">
+      <screen x="0" y="0" width="1839" height="1080" />
+    </state>
+    <state x="683" y="137" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1839.1080@0.0.1839.1080" timestamp="1585372451522" />
+    <state width="1818" height="368" key="GridCell.Tab.0.bottom" timestamp="1585449132710">
+      <screen x="0" y="0" width="1839" height="1080" />
+    </state>
+    <state width="1818" height="368" key="GridCell.Tab.0.bottom/0.0.1839.1080@0.0.1839.1080" timestamp="1585449132710" />
+    <state width="1818" height="368" key="GridCell.Tab.0.center" timestamp="1585449132709">
+      <screen x="0" y="0" width="1839" height="1080" />
+    </state>
+    <state width="1818" height="368" key="GridCell.Tab.0.center/0.0.1839.1080@0.0.1839.1080" timestamp="1585449132709" />
+    <state width="1818" height="368" key="GridCell.Tab.0.left" timestamp="1585449132709">
+      <screen x="0" y="0" width="1839" height="1080" />
+    </state>
+    <state width="1818" height="368" key="GridCell.Tab.0.left/0.0.1839.1080@0.0.1839.1080" timestamp="1585449132709" />
+    <state width="1818" height="368" key="GridCell.Tab.0.right" timestamp="1585449132709">
+      <screen x="0" y="0" width="1839" height="1080" />
+    </state>
+    <state width="1818" height="368" key="GridCell.Tab.0.right/0.0.1839.1080@0.0.1839.1080" timestamp="1585449132709" />
+    <state width="1047" height="148" key="GridCell.Tab.1.bottom" timestamp="1585373264036">
+      <screen x="0" y="0" width="1839" height="1080" />
+    </state>
+    <state width="1047" height="148" key="GridCell.Tab.1.bottom/0.0.1839.1080@0.0.1839.1080" timestamp="1585373264036" />
+    <state width="1047" height="148" key="GridCell.Tab.1.center" timestamp="1585373264036">
+      <screen x="0" y="0" width="1839" height="1080" />
+    </state>
+    <state width="1047" height="148" key="GridCell.Tab.1.center/0.0.1839.1080@0.0.1839.1080" timestamp="1585373264036" />
+    <state width="1047" height="148" key="GridCell.Tab.1.left" timestamp="1585373264034">
+      <screen x="0" y="0" width="1839" height="1080" />
+    </state>
+    <state width="1047" height="148" key="GridCell.Tab.1.left/0.0.1839.1080@0.0.1839.1080" timestamp="1585373264034" />
+    <state width="1047" height="148" key="GridCell.Tab.1.right" timestamp="1585373264036">
+      <screen x="0" y="0" width="1839" height="1080" />
+    </state>
+    <state width="1047" height="148" key="GridCell.Tab.1.right/0.0.1839.1080@0.0.1839.1080" timestamp="1585373264036" />
+    <state x="684" y="208" key="SettingsEditor" timestamp="1585435021271">
+      <screen x="0" y="0" width="1839" height="1080" />
+    </state>
+    <state x="684" y="208" key="SettingsEditor/0.0.1839.1080@0.0.1839.1080" timestamp="1585435021271" />
+    <state x="857" y="18" width="745" height="894" key="find.popup" timestamp="1585363118472">
+      <screen x="0" y="0" width="1839" height="1080" />
+    </state>
+    <state x="857" y="18" width="745" height="894" key="find.popup/0.0.1839.1080@0.0.1839.1080" timestamp="1585363118472" />
+    <state x="1009" y="350" width="672" height="678" key="search.everywhere.popup" timestamp="1585447275350">
+      <screen x="0" y="0" width="1839" height="1080" />
+    </state>
+    <state x="1009" y="350" width="672" height="678" key="search.everywhere.popup/0.0.1839.1080@0.0.1839.1080" timestamp="1585447275350" />
+  </component>
+</project>

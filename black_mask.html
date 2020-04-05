@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Webpage Title -->
+    <title> 코라나 19 | 검정마스크 구입하기</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+        function isCellPhone(p) {
+            var regExp = /^(01[016789]{1}|02|0[3-9]{1}[0-9]{1})[-][0-9]{3,4}[-][0-9]{4}$/;
+            return regExp.test(p);
+        }
+
+
+        // 20.4/5 일 추가코드
+
+        $(document).ready(function() {
+            $('#orders-box').html('');
+            listing();
+        });
+
+        // 1. 전화번호를 판단하는 함수를 설정한다.
+        function isCellPhone(p) {
+            var regExp = /^(01[016789]{1}|02|0[3-9]{1}[0-9]{1})[-][0-9]{3,4}[-][0-9]{4}$/;
+            return regExp.test(p);
+        }
+
+        function make_order() {
+            // 1. 이름, 수량, 주소, 전화번호 내용을 가져옵니다.
+            // 2. 이름, 수량, 주소, 전화번호 중 하나라도 입력하지 않았을 경우 alert를 띄웁니다.
+
+            let input_value_name = $('#order_name').val();
+            let input_value_quantity = $('#order_quantity option:selected').val();
+            let input_value_address = $('#order_address').val();
+            let input_value_phone = $('#order_phone').val();
+
+            if (input_value_name == '') {
+                alert('이름을 입력하시요');
+                $('#order_name').focus();
+                return;
+            } else if (input_value_quantity == 0) {
+                alert('수량을 선택하시요!');
+                $('#order_quantity').focus();
+                return;
+            } else if (input_value_address == '') {
+                alert('주소를 입력하시요!');
+                $('#order_address').focus();
+                return;
+                // } else if (!isCellPhone(input_value_phone)) {
+                //     alert('전화번호를 다시 입력하시요! 000-0000-0000 형식으로 입력하시요');
+                //     return;
+            }
+            // alert(input_value_name);
+            // alert(input_value_quantity);
+            // alert(input_value_address);
+            // alert(input_value_phone);
+            // alert(' 주문이 완료되었습니다.!!');
+
+            // 3. POST /reviews 에 저장을 요청합니다.
+            $.ajax({
+                type: 'POST', // 타입을 작성합니다.
+                url: '/reviews', // url을 작성합니다.
+                data: {
+                    name_give: order_name,
+                    quantity_give: order_quantity,
+                    address_give: order_address,
+                    phone_give: order_phone
+                },
+                success: function(response) {
+                    if (response['result'] == 'success') {
+                        alert(response['msg']);
+                        $('#order_name').val('');
+                        $('#order_quantity').val('');
+                        $('#order_address').val('');
+                        $('#order_phone').val('');
+                        window.location.reload();
+                    }
+                }
+            });
+
+        }
+
+        function listing() {
+            // 1. 리뷰 목록을 서버에 요청하기
+            // 2. 요청 성공 여부 확인하기
+            // 3. 요청 성공했을 때 리뷰를 올바르게 화면에 나타내기
+            $.ajax({
+                type: "GET",
+                url: "/reviews",
+                data: {},
+                success: function(response) {
+                    if (response['result'] == 'success') {
+                        alert(response['msg']);
+                        // 2. 성공했을 때 리뷰를 올바르게 화면에 나타내기
+                    } else {
+                        alert('리뷰를 받아오지 못했습니다');
+                    }
+                }
+            });
+
+        }
+
+
+        // function make_card(title, author, review) {
+        //     let temp_html = '<tr>\
+        //                         <td>' + title + '</td>\
+        //                         <td>' + author + '</td>\
+        //                         <td>' + review + '</td>\
+        //                     </tr>';
+        //     $('#orders-box').append(temp_html);
+        // }
+
+        // function is_long(obj) {
+        //     let content = $(obj).val();
+        //     if (content.length > 140) {
+        //         alert('리뷰는 140자까지 기록할 수 있습니다.');
+        //         $(obj).val(content.substring(0, content.length - 1));
+        //     }
+        // }
+        // 20.4/5 일 추가코드
+
+        function save() {
+
+        }
+
+
+        function clearInput() {
+            /* 텍스트박스 지우는 부분 */
+            document.getElementById("order_name").value = "-- 이름을 입력하세요 --";
+            document.getElementById("order_name").value = "-- 수량을 선택하세요 --";
+            document.getElementById("order_address").value = "-- 주소를 입력하세요 --";
+            document.getElementById("order_phone").value = "-- 전화번호를 입력하세요 --";
+
+        }
+    </script>
+
+    <style type="text/css">
+        .mouse_title {
+            color: black;
+            width: 1500px;
+            height: 300px;
+            border-radius: 10px;
+            /* 이미지 위치를 정렬 중앙*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #message {
+            float: left;
+        }
+        
+        #price {
+            margin: 0 0 10px 500px;
+            font-size: 15px;
+            /* float: left; */
+        }
+        
+        .name {
+            width: 830px;
+            margin: 50px 100px 0 330px;
+            /* display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto; */
+        }
+        
+        .Quantity {
+            width: 830px;
+            margin: 50px 100px 0 330px;
+            /* display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto; */
+        }
+        
+        .address {
+            width: 830px;
+            margin: 50px 100px 0 330px;
+            /* display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto; */
+        }
+        
+        .phone_number {
+            width: 830px;
+            margin: 50px 100px 0 330px;
+            /* display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto; */
+        }
+        
+        .bottom_button {
+            width: 830px;
+            margin: 50px 500px 0 700px;
+            /* display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto; */
+        }
+        /* .order_list {
+            width: 830px;
+            margin: 50px 100px 0 0px;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div class="mouse_product">
+        <div class="mouse_title">
+            <img src="https://thumbnail13.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/35d4/d2318cd5c6377d373bbfe33b37eb0b3040f4f4fd8a69b6fba850f338acca.jpg" alt="..." style="margin-left: auto; margin-right: auto; display: block;">
+            <h1> 검정마스크를 팝니다!</h1>
+            <h3 id="price"> 가격 : 3000원/개</h3>
+            <p class="card-text">이 검정마스크는 매우 비쌉니다. 단. 이제품을 사용한 고객분들은 거의 만족하였습니다. 안심하고 쓰셔도 되겠습니다.</p>
+        </div>
+
+    </div>
+
+    <div class="name">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">주문자이름</span>
+            </div>
+            <input id="order_name" type="text" class="form-control" placeholder="-- 이름을 입력하세요 --" aria-describedby="basic-addon3">
+        </div>
+    </div>
+
+
+    <div class="Quantity">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">수량</span>
+            </div>
+            <select class="form-control" id="order_quantity">
+                <option value='0'>-- 수량을 선택하시요 --</option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+              </select>
+        </div>
+
+    </div>
+
+    <div class="address">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">주소</span>
+            </div>
+            <input id="order_address" type="text" class="form-control" placeholder="-- 주소를 입력하세요 --" aria-describedby="basic-addon1">
+        </div>
+
+    </div>
+
+
+    <div class="phone_number">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">전화번호</span>
+            </div>
+            <input id="order_phone" type="text" class="form-control" placeholder="-- 전화번호를 입력하세요 --" aria-describedby="basic-addon1">
+        </div>
+
+    </div>
+
+    <div class="bottom_button">
+        <button type="button" class="btn btn-primary" onclick="make_order()"> 주문을 하시요! </button>
+        <button type="button" class="btn btn-secondary" onclick="clearInput()"> 내용 지우기 </button>
+        <div>
+
+</body>
+
+</html>

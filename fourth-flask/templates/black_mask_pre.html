@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS 참조사이트를 Link를 건다. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style>
+        .mouse_title {
+            color: black;
+            width: 1500px;
+            height: 300px;
+            border-radius: 10px;
+            /* 이미지 위치를 정렬 중앙*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #message {
+            float: left;
+        }
+
+        #price {
+            margin: 0 0 10px 500px;
+            font-size: 15px;
+            /* float: left; */
+        }
+
+        .name {
+            width: 830px;
+            margin: 50px 100px 0 330px;
+            /* display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto; */
+        }
+
+        .Quantity {
+            width: 830px;
+            margin: 50px 100px 0 330px;
+            /* display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto; */
+        }
+
+        .address {
+            width: 830px;
+            margin: 50px 100px 0 330px;
+            /* display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto; */
+        }
+
+        .phone_number {
+            width: 830px;
+            margin: 50px 100px 0 330px;
+            /* display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto; */
+        }
+
+        .bottom_button {
+            width: 830px;
+            margin: 50px 500px 0 700px;
+            /* display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto; */
+        }
+        /* .order_list {
+            width: 830px;
+            margin: 50px 100px 0 0px;
+        } */
+    </style>
+
+    <script>
+        function isCellPhone(p) {
+            var regExp = /^(01[016789]{1}|02|0[3-9]{1}[0-9]{1})[-][0-9]{3,4}[-][0-9]{4}$/;
+            return regExp.test(p);
+        }
+
+
+        function save() {
+            let input_value_name = $('#order_name').val();
+            let input_value_quantity = $('#order_quantity option:selected').val();
+            let input_value_address = $('#order_address').val();
+            let input_value_phone = $('#order_phone').val();
+
+            if (input_value_name == '') {
+                alert('이름을 입력하시요');
+                $('#order_name').focus();
+                return;
+            } else if (input_value_quantity == 0) {
+                alert('수량을 선택하시요!');
+                $('#order_quantity').focus();
+                return;
+            } else if (input_value_address == '') {
+                alert('주소를 입력하시요!');
+                $('#order_address').focus();
+                return;
+            } else if (!isCellPhone(input_value_phone)) {
+                alert('전화번호를 다시 입력하시요! 000-0000-0000 형식으로 입력하시요');
+                return;
+            }
+            alert(' 주문이 완료되었습니다.!! ');
+        }
+
+
+        function clearInput() {
+            /* 텍스트박스 지우는 부분 */
+            document.getElementById("order_name").value = "-- 이름을 입력하세요 --";
+            document.getElementById("order_name").value = "-- 수량을 선택하세요 --";
+            document.getElementById("order_address").value = "-- 주소를 입력하세요 --";
+            document.getElementById("order_phone").value = "-- 전화번호를 입력하세요 --";
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="mouse_product">
+        <div class="mouse_title">
+            <img src="https://thumbnail13.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/35d4/d2318cd5c6377d373bbfe33b37eb0b3040f4f4fd8a69b6fba850f338acca.jpg" alt="..." style="margin-left: auto; margin-right: auto; display: block;">
+            <h1> 검정마스크를 팝니다!</h1>
+            <h3 id="price"> 가격 : 3000원/개</h3>
+            <p class="card-text">이 검정마스크는 매우 비쌉니다. 단. 이제품을 사용한 고객분들은 거의 만족하였습니다. 안심하고 쓰셔도 되겠습니다.</p>
+        </div>
+
+    </div>
+
+    <div class="name">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">주문자이름</span>
+            </div>
+            <input id="order_name" type="text" class="form-control" placeholder="-- 이름을 입력하세요 --" aria-describedby="basic-addon3">
+        </div>
+    </div>
+
+
+    <div class="Quantity">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">수량</span>
+            </div>
+            <select class="form-control" id="order_quantity">
+                <option value='0'>-- 수량을 선택하시요 --</option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+              </select>
+        </div>
+
+    </div>
+
+    <div class="address">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">주소</span>
+            </div>
+            <input id="order_address" type="text" class="form-control" placeholder="-- 주소를 입력하세요 --" aria-describedby="basic-addon1">
+        </div>
+
+    </div>
+
+
+    <div class="phone_number">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">전화번호</span>
+            </div>
+            <input id="order_phone" type="text" class="form-control" placeholder="-- 전화번호를 입력하세요 --" aria-describedby="basic-addon1">
+        </div>
+
+    </div>
+
+    <div class="bottom_button">
+        <button type="button" class="btn btn-primary" onclick="save()"> 주문을 하시요! </button>
+        <button type="button" class="btn btn-secondary" onclick="clearInput()"> 내용 지우기 </button>
+        <div>
+
+</body>
+
+</html>

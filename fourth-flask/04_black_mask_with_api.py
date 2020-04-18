@@ -17,10 +17,10 @@ def home():
 # API 역할을 하는 부분
 @app.route('/reviews', methods=['POST'])
 def write_review():
-    name_receive 로 클라이언트가 준 name 가져오기
-    name_receive = request.form['name_give']
-    print(name_receive)
-    return jsonify({'result': 'success', 'msg': '이 요청은 POST!','name_receive': name_receive})
+    # name_receive 로 클라이언트가 준 name 가져오기
+    # name_receive = request.form['name_give']
+    # print(name_receive)
+    # return jsonify({'result': 'success', 'msg': '이 요청은 POST!','name_receive': name_receive})
 
     # # quantity_receive로 클라이언트가 준 quantity 가져오기
     # quantity_receive = request.form['quantity_give']
@@ -40,7 +40,7 @@ def write_review():
     # # orders 에 order_list 저장하기
     # db.orders.insert_one(order_list)
 
-    # return jsonify({'result': 'success', 'msg': '이 요청은 POST!'})
+    return jsonify({'result': 'success', 'msg': '이 요청은 POST!'})
     # 성공 여부 & 성공 메시지 반환
     # return jsonify({'result': 'success', 'msg': '리뷰가 성공적으로 작성되었습니다.'})
 
